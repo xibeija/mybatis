@@ -9,7 +9,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
  
-import com.how2java.pojo.Category;
 import com.how2java.pojo.Product;
   
 public class TestMybatis {
@@ -20,13 +19,9 @@ public class TestMybatis {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession session = sqlSessionFactory.openSession();
   
-        List<Category> cs = session.selectList("listCategory");
-        for (Category c : cs) {
-            System.out.println(c);
-            List<Product> ps = c.getProducts();
-            for (Product p : ps) {
-                System.out.println("\t"+p);
-            }
+        List<Product> ps = session.selectList("listProduct");
+        for (Product p : ps) {
+            System.out.println(p+" 对应的分类是 \t "+ p.getCategory());
         }
  
         session.commit();
