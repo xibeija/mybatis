@@ -12,6 +12,11 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
     <typeAliases>
       <package name="com.how2java.pojo"/>
     </typeAliases>
+	<plugins>
+	    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+			
+		</plugin>
+	</plugins>      
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -28,4 +33,5 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <mapper class="com.how2java.mapper.CategoryMapper"/>  
         <mapper class="com.how2java.mapper.ProductMapper"/>  
     </mappers>
+  
 </configuration>
