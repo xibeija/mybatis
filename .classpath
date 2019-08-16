@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="E:/project/mybatis/lib/jsqlparser-1.0.jar"/>
 	<classpathentry kind="lib" path="E:/project/mybatis/lib/pagehelper-5.1.0-beta2.jar"/>
 	<classpathentry kind="lib" path="E:/project/mybatis/lib/c3p0-0.9.1.2.jar"/>
+	<classpathentry kind="lib" path="E:/project/mybatis/lib/mybatis-generator-core-1.3.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
